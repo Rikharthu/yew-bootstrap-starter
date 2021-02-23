@@ -1,0 +1,9 @@
+[tasks.build-web]
+install_crate = "wasm-pack"
+command = "wasm-pack"
+args = ["build", "--target", "web", "--out-name", "wasm", "--out-dir", "./static"]
+
+[tasks.serve]
+install_crate = "miniserve"
+command = "miniserve"
+args = ["./static", "--index", "index.html"]
